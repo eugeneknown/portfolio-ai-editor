@@ -1,9 +1,10 @@
 import React, { useState, useRef } from 'react';
 import { portfolioData } from '../data/portfolioData';
-import { Play, Volume2, VolumeX, Sparkles, ArrowDown, CheckCircle2, Video } from 'lucide-react';
+import { Play, Volume2, VolumeX, Sparkles, Video, Mail } from 'lucide-react';
 
 export function Hero({ onOpenProject }) {
-  const { personal, stats } = portfolioData;
+  const { personal } = portfolioData;
+  const stats = personal?.stats || [];
   const [isPlaying, setIsPlaying] = useState(true);
   const [isMuted, setIsMuted] = useState(true);
   const videoRef = useRef(null);
@@ -67,11 +68,11 @@ export function Hero({ onOpenProject }) {
               Watch Commercial Work
             </a>
             <a
-              href="#estimator"
+              href={`mailto:${personal.email}`}
               className="px-6 py-3.5 rounded-xl text-sm font-semibold bg-zinc-900/90 text-zinc-200 hover:text-white border border-zinc-700/80 hover:border-zinc-500 backdrop-blur-lg transition-all transform hover:-translate-y-0.5 flex items-center gap-2"
             >
-              <Sparkles className="w-4 h-4 text-indigo-400" />
-              Estimate Project Scope
+              <Mail className="w-4 h-4 text-indigo-400" />
+              Inquire via Email
             </a>
           </div>
         </div>

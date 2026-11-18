@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { X, Play, Sliders, CheckCircle2, Award, Clock, ArrowRight, Layers, FileCode, Sparkles } from 'lucide-react';
+import { portfolioData } from '../data/portfolioData';
+import { X, Play, Sliders, CheckCircle2, Award, Clock, ArrowRight, Layers, FileCode, Sparkles, Mail } from 'lucide-react';
 
-export function VideoModal({ project, onClose, onSelectScope }) {
+export function VideoModal({ project, onClose }) {
   const [activeTab, setActiveTab] = useState('video'); // 'video' | 'workflow' | 'comparison'
 
   // Close on Escape key press
@@ -231,16 +232,13 @@ export function VideoModal({ project, onClose, onSelectScope }) {
           </div>
 
           <div className="flex items-center gap-3 w-full sm:w-auto">
-            <button
-              onClick={() => {
-                onClose();
-                onSelectScope(project.category);
-              }}
+            <a
+              href={`mailto:${portfolioData.personal.email}?subject=${encodeURIComponent(`Project Inquiry: ${project.title}`)}`}
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider bg-indigo-600 hover:bg-indigo-500 text-white shadow-lg shadow-indigo-600/30 transition-all"
             >
-              Configure Scope Like This
-              <ArrowRight className="w-3.5 h-3.5" />
-            </button>
+              <Mail className="w-3.5 h-3.5" />
+              Inquire About Similar Project
+            </a>
           </div>
         </div>
 

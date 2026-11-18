@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { portfolioData } from '../data/portfolioData';
-import { Calendar, FileText, ArrowRight, Menu, X, Sparkles } from 'lucide-react';
+import { Mail, FileText, ArrowRight, Menu, X } from 'lucide-react';
 
 export function Navbar({ onOpenResume, onOpenEstimator }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -51,9 +51,8 @@ export function Navbar({ onOpenResume, onOpenEstimator }) {
           <button onClick={() => scrollTo('tools')} className="hover:text-white transition-colors">
             Tech Stack
           </button>
-          <button onClick={() => scrollTo('estimator')} className="hover:text-white transition-colors flex items-center gap-1.5 text-indigo-400 hover:text-indigo-300">
-            <Sparkles className="w-3.5 h-3.5" />
-            Scope Estimator
+          <button onClick={() => scrollTo('contact')} className="hover:text-white transition-colors text-indigo-400 hover:text-indigo-300">
+            Get In Touch
           </button>
         </nav>
 
@@ -68,13 +67,11 @@ export function Navbar({ onOpenResume, onOpenEstimator }) {
           </button>
           
           <a
-            href={personal.calendarUrl}
-            target="_blank"
-            rel="noopener noreferrer"
+            href={`mailto:${personal.email}?subject=${encodeURIComponent("Project Inquiry: AI Video Editing")}`}
             className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-semibold bg-indigo-600 hover:bg-indigo-500 text-white shadow-lg shadow-indigo-600/30 transition-all transform active:scale-95"
           >
-            <Calendar className="w-3.5 h-3.5" />
-            Book Call
+            <Mail className="w-3.5 h-3.5" />
+            Email Me
             <ArrowRight className="w-3 h-3" />
           </a>
         </div>
@@ -107,8 +104,8 @@ export function Navbar({ onOpenResume, onOpenEstimator }) {
             <button onClick={() => scrollTo('tools')} className="text-left py-2 hover:text-indigo-400">
               Tech Stack
             </button>
-            <button onClick={() => scrollTo('estimator')} className="text-left py-2 hover:text-indigo-400 text-indigo-400">
-              Scope Estimator
+            <button onClick={() => scrollTo('contact')} className="text-left py-2 hover:text-indigo-400 text-indigo-400">
+              Get In Touch
             </button>
           </div>
 
@@ -121,13 +118,11 @@ export function Navbar({ onOpenResume, onOpenEstimator }) {
               Resume & Specs
             </button>
             <a
-              href={personal.calendarUrl}
-              target="_blank"
-              rel="noopener noreferrer"
+              href={`mailto:${personal.email}?subject=${encodeURIComponent("Project Inquiry: AI Video Editing")}`}
               className="w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg text-sm font-semibold bg-indigo-600 text-white shadow-lg shadow-indigo-600/30"
             >
-              <Calendar className="w-4 h-4" />
-              Book Discovery Call
+              <Mail className="w-4 h-4" />
+              Email Me Directly
             </a>
           </div>
         </div>

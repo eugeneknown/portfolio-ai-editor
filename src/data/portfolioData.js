@@ -1,20 +1,14 @@
 export const portfolioData = {
   personal: {
-    name: "Alex Vance", // Customize with your name
+    name: "Eugene Gardose",
     role: "AI Video Editor & Post-Producer",
     tagline: "Bridging Generative AI & High-End Commercial Filmmaking",
     bio: "I don't just generate AI video—I direct, composite, and finish it to broadcast and commercial standards. Specializing in cinematic Higgsfield camera choreography, photorealistic HeyGen avatar localization, and frame-accurate DaVinci/Premiere post-production.",
     availability: "Available for Q1 / Q2 Projects",
     experienceYears: "5+ Years Video Editing / 2+ Years Gen-AI",
     location: "Global Remote (EST / PST / CET friendly)",
-    email: "alex.vance.aivideo@gmail.com",
-    calendarUrl: "https://cal.com", // Replace with your Cal.com or Calendly URL
-    socials: {
-      twitter: "https://x.com",
-      linkedin: "https://linkedin.com",
-      youtube: "https://youtube.com",
-      instagram: "https://instagram.com"
-    },
+    email: "eugenegardose@gmail.com",
+    socials: {},
     stats: [
       { label: "Videos Delivered", value: "140+" },
       { label: "Avg Turnaround", value: "48-72h" },
@@ -22,6 +16,13 @@ export const portfolioData = {
       { label: "Average ROAS Boost", value: "+3.2x" }
     ]
   },
+
+  stats: [
+    { label: "Videos Delivered", value: "140+" },
+    { label: "Avg Turnaround", value: "48-72h" },
+    { label: "Client Views Generated", value: "18M+" },
+    { label: "Average ROAS Boost", value: "+3.2x" }
+  ],
 
   services: [
     {
@@ -304,13 +305,13 @@ export const portfolioData = {
 
   testimonials: [
     {
-      quote: "Alex transformed our product launch. We were skeptical of AI video, but the combination of Higgsfield camera work and commercial sound design looked like a $50k studio commercial.",
-      author: "Marcus Vance",
+      quote: "Eugene transformed our product launch. We were skeptical of AI video, but the combination of Higgsfield camera work and commercial sound design looked like a $50k studio commercial.",
+      author: "Marcus Reed",
       title: "VP of Growth, Lumina Sound",
       avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80"
     },
     {
-      quote: "Our global enterprise needed our CEO's vision localized into 8 languages immediately. The HeyGen setup Alex delivered had zero 'uncanny valley' and saved our team weeks of filming.",
+      quote: "Our global enterprise needed our CEO's vision localized into 8 languages immediately. The HeyGen setup Eugene delivered had zero 'uncanny valley' and saved our team weeks of filming.",
       author: "Elena Rostova",
       title: "Head of Marketing, NovaPay Global",
       avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=200&q=80"

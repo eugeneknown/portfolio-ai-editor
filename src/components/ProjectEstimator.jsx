@@ -343,13 +343,11 @@ export function ProjectEstimator({ preselectedService }) {
                 </button>
 
                 <a
-                  href={personal.calendarUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href={`mailto:${personal.email}?subject=${emailSubject}&body=${emailBody}`}
                   className="flex items-center justify-center gap-2 px-3 py-2.5 rounded-lg text-xs font-semibold bg-white/5 hover:bg-white/10 text-zinc-300 border border-white/10 transition-colors"
                 >
-                  <Calendar className="w-3.5 h-3.5 text-indigo-400" />
-                  <span>Book Call</span>
+                  <Mail className="w-3.5 h-3.5 text-indigo-400" />
+                  <span>Email Brief</span>
                 </a>
               </div>
             </div>

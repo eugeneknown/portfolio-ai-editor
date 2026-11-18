@@ -1,6 +1,6 @@
 import React from 'react';
 import { portfolioData } from '../data/portfolioData';
-import { Calendar, Mail, ArrowUpRight, Sparkles } from 'lucide-react';
+import { Mail, ArrowUpRight, Sparkles } from 'lucide-react';
 
 export function Footer({ onOpenResume }) {
   const { personal } = portfolioData;
@@ -11,7 +11,7 @@ export function Footer({ onOpenResume }) {
   };
 
   return (
-    <footer className="relative bg-zinc-950 border-t border-white/10 pt-20 pb-12 overflow-hidden">
+    <footer id="contact" className="relative bg-zinc-950 border-t border-white/10 pt-20 pb-12 overflow-hidden">
       
       {/* Background glow */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-indigo-600/10 rounded-full blur-[140px] pointer-events-none"></div>
@@ -33,23 +33,13 @@ export function Footer({ onOpenResume }) {
             Let's discuss your creative goals, analyze your target hooks, and build an on-demand generative video pipeline tailored to your brand.
           </p>
 
-          <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
+          <div className="flex items-center justify-center pt-2">
             <a
-              href={personal.calendarUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-8 py-3.5 rounded-xl text-xs font-bold uppercase tracking-wider bg-white text-zinc-950 hover:bg-zinc-200 transition-colors shadow-xl shadow-white/10 flex items-center gap-2"
+              href={`mailto:${personal.email}?subject=${encodeURIComponent("Commercial AI Video Project Inquiry")}`}
+              className="px-8 py-4 rounded-xl text-xs font-bold uppercase tracking-wider bg-white text-zinc-950 hover:bg-zinc-200 transition-colors shadow-xl shadow-white/10 flex items-center gap-2.5 transform hover:-translate-y-0.5"
             >
-              <Calendar className="w-4 h-4 text-indigo-600" />
-              Schedule 15-Min Intro Call
-            </a>
-
-            <a
-              href={`mailto:${personal.email}`}
-              className="px-8 py-3.5 rounded-xl text-xs font-bold uppercase tracking-wider bg-zinc-900 text-zinc-200 hover:text-white border border-zinc-700 transition-colors flex items-center gap-2"
-            >
-              <Mail className="w-4 h-4 text-indigo-400" />
-              Email Direct Inquiry
+              <Mail className="w-4 h-4 text-indigo-600" />
+              Email Direct Inquiry ({personal.email})
             </a>
           </div>
         </div>
@@ -79,35 +69,23 @@ export function Footer({ onOpenResume }) {
               <li><button onClick={() => scrollTo('work')} className="hover:text-white transition-colors">Commercial Work</button></li>
               <li><button onClick={() => scrollTo('services')} className="hover:text-white transition-colors">Services & Pricing</button></li>
               <li><button onClick={() => scrollTo('workflow')} className="hover:text-white transition-colors">Production Pipeline</button></li>
-              <li><button onClick={() => scrollTo('estimator')} className="hover:text-white transition-colors">Scope Estimator</button></li>
               <li><button onClick={onOpenResume} className="hover:text-indigo-400 transition-colors">ATS Resume & Specs</button></li>
             </ul>
           </div>
 
           <div className="space-y-2">
             <span className="font-bold text-white text-xs uppercase tracking-wider block mb-2">
-              Connect
+              Direct Contact
             </span>
             <ul className="space-y-1.5">
               <li>
-                <a href={personal.socials.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors flex items-center gap-1">
-                  LinkedIn <ArrowUpRight className="w-3 h-3" />
-                </a>
-              </li>
-              <li>
-                <a href={personal.socials.twitter} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors flex items-center gap-1">
-                  X / Twitter <ArrowUpRight className="w-3 h-3" />
-                </a>
-              </li>
-              <li>
-                <a href={personal.socials.youtube} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors flex items-center gap-1">
-                  YouTube Showreels <ArrowUpRight className="w-3 h-3" />
-                </a>
-              </li>
-              <li>
-                <a href={`mailto:${personal.email}`} className="hover:text-indigo-400 transition-colors">
+                <a href={`mailto:${personal.email}`} className="text-indigo-400 hover:text-indigo-300 font-semibold transition-colors flex items-center gap-1.5">
+                  <Mail className="w-3.5 h-3.5" />
                   {personal.email}
                 </a>
+              </li>
+              <li className="text-zinc-500 text-[11px] font-mono pt-1">
+                Typical response time: &lt; 4 hours
               </li>
             </ul>
           </div>

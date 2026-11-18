@@ -92,13 +92,13 @@ export function Services({ onSelectService }) {
                     <span className="text-lg font-bold text-white font-mono">{service.startingPrice}</span>
                   </div>
 
-                  <button
-                    onClick={() => onSelectService(service.id)}
+                  <a
+                    href={`mailto:${portfolioData.personal.email}?subject=${encodeURIComponent(`Inquiry: ${service.title}`)}`}
                     className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg text-xs font-semibold bg-indigo-600/20 hover:bg-indigo-600 text-indigo-300 hover:text-white border border-indigo-500/30 hover:border-indigo-500 transition-all"
                   >
-                    Configure Scope
+                    Inquire Project
                     <ArrowRight className="w-3.5 h-3.5" />
-                  </button>
+                  </a>
                 </div>
               </div>
             );
@@ -117,12 +117,10 @@ export function Services({ onSelectService }) {
             </p>
           </div>
           <a
-            href={portfolioData.personal.calendarUrl}
-            target="_blank"
-            rel="noopener noreferrer"
+            href={`mailto:${portfolioData.personal.email}?subject=${encodeURIComponent("Dedicated Monthly Retainer Inquiry")}`}
             className="px-6 py-3 rounded-xl text-xs font-bold uppercase tracking-wider bg-white text-zinc-950 hover:bg-zinc-200 transition-colors shadow-lg shadow-white/10 shrink-0"
           >
-            Inquire for Retainer
+            Inquire for Retainer via Email
           </a>
         </div>
 
